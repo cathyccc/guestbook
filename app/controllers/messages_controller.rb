@@ -1,15 +1,15 @@
 class MessagesController < ApplicationController
   def index
     @message = Message.new
-    @messages = Message.all
+    @messages = Message.all.order(created_at: :desc)
   end
 
   def create
     @message = Message.new(message_params)
-    if @message.save
-      redirect_to root_path
-    else
-      render :message
+    @message.save
+    respond_to do |format|
+      format.html { render html: "<p>#{@message.text}</p>".html_safe }
+      format.json { render json: @message.to_json }
     end
   end
 

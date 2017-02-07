@@ -1,11 +1,12 @@
-<h1>Guestbook</h1>
 <p>Thanks for dropping by! Feel free to leave a message.</p>
 
-<% @messages.to_a.each do |msg| %>
-  <p><%= msg.text %><p>
-<% end %>
+<div id="messageBoard">
+  <% @messages.each do |msg| %>
+    <p><%= msg.text %><p>
+  <% end %>
+</div>
 
-<%= form_for @message do |f| %>
-  <%= f.text_area :text %>
-  <%= f.submit "Submit" %>
-<% end %>
+  <%= form_for @message, html: {id:"message-form"} do |f| %>
+    <%= f.text_area :text, id: "message-text-area" %>
+    <%= f.submit "Submit", id: "submitMessage", :data => { disable_with: false } %>
+  <% end %>
