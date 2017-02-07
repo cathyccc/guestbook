@@ -1,0 +1,11 @@
+<h1>Guestbook</h1>
+<p>Thanks for dropping by! Feel free to leave a message.</p>
+
+<% @messages.each do |msg| %>
+  <% msg %>
+<% end %>
+
+<%= form_for @message do |f| %>
+  <%= f.text_area :text %>
+  <%= f.submit "Submit" %>
+<% end %>
