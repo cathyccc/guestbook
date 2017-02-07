@@ -1,8 +1,8 @@
 <h1>Guestbook</h1>
 <p>Thanks for dropping by! Feel free to leave a message.</p>
 
-<% @messages.each do |msg| %>
-  <% msg %>
+<% @messages.to_a.each do |msg| %>
+  <p><%= msg.text %><p>
 <% end %>
 
 <%= form_for @message do |f| %>
