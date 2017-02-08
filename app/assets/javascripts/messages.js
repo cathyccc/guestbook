@@ -21,7 +21,7 @@ $(function(){
       var ampm = (getHour>12)? "PM":"AM";
 
       var commentorDiv = $('<div>').addClass('guest-name');
-      commentorDiv.append(`${returnData.guestname} wrote on ${month} ${date}, ${year} at ${hour}:${minute} ${ampm}`);
+      commentorDiv.append(returnData.guestname + " wrote on " + month + " " + date + ", " + year + " at " + hour + ":" + minute + " " + ampm);
       commentFullDiv.append(commentDiv).append(commentorDiv);
       $('#messageBoard').prepend(commentFullDiv);
     }).done(function(){
