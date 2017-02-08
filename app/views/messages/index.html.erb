@@ -12,6 +12,9 @@
 
 <div class="form">
   <%= form_for @message, html: {id:"message-form"} do |f| %>
+    <div class="commenter">
+      <%= f.text_field :guestname, id: "message-commentor", placeholder: "Your Name"%>
+    </div>
     <div class="comment-text-box">
       <%= f.text_area :text, id: "message-text-area", placeholder: "Add your comment here." %>
     </div>
