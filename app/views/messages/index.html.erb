@@ -10,7 +10,7 @@
           <%= msg.text %>
         </div>
         <div class="guest-name">
-          <%= msg.guestname %>
+          <%= msg.guestname %> written on <%= msg.created_at.strftime("%B %e, %Y at %l:%M %p") %>
         </div>
       </div>
     <% end %>
