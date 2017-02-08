@@ -10,7 +10,15 @@
   </head>
 
   <body>
+
+    <div class="logo">
+      <%= image_tag ("boy.svg") %>
+      <%= image_tag ("girl.svg") %>
+    </div>
+
     <h1 class="title">Guestbook</h1>
     <%= yield %>
+
+    <div class="footer">&copy; 2017 Cathy Chan</div>
   </body>
 </html>

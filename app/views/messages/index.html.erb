@@ -1,11 +1,12 @@
 <p class="intro">Thanks for dropping by! Feel free to leave a message.</p>
 
-<div id="messageBoard">
+<div id="messageBoard" class="message-board">
   <% @messages.each do |msg| %>
-    <p><%= msg.text %><p>
+    <p class="comment"><%= msg.text %><p>
   <% end %>
 </div>
 
+<div class="form">
   <%= form_for @message, html: {id:"message-form"} do |f| %>
     <div class="comment-text-box">
       <%= f.text_area :text, id: "message-text-area" %>
@@ -14,3 +15,4 @@
       <%= f.submit "Submit", id: "submitMessage", :data => { disable_with: false } %>
     </div>
   <% end %>
+</div>

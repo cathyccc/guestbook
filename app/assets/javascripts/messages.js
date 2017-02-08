@@ -7,7 +7,7 @@ $(function(){
       data: $(this).serialize(),
       dataType: 'json'
     }).success(function(returnData){
-      $('#messageBoard').prepend(`<p>${returnData.text}</p>`);
+      $('#messageBoard').prepend(`<p class="comment">${returnData.text}</p>`);
     }).done(function(){
       $('#message-text-area').val("");
     });
