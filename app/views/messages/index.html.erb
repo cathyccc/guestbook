@@ -9,7 +9,7 @@
 <div class="form">
   <%= form_for @message, html: {id:"message-form"} do |f| %>
     <div class="comment-text-box">
-      <%= f.text_area :text, id: "message-text-area" %>
+      <%= f.text_area :text, id: "message-text-area", placeholder: "Add your comment here." %>
     </div>
     <div class="comment-submit">
       <%= f.submit "Submit", id: "submitMessage", :data => { disable_with: false } %>
