@@ -32,19 +32,27 @@ body{
   padding-right: 0.6em;
 }
 
-.message-board p:last-child{
-  margin-bottom: 2em;
-}
-
 .no-comment{
   color: #42b4c2;
   padding: 0.1em 0.8em 0.8em 0.8em;
 }
 
-.comment{
-  text-align: left;
+.fullMessage{
   border-bottom: 1px solid rgba(219, 222, 222, 0.8);
-  padding: 0.1em 0.8em 0.8em 0.8em;
+  padding: 1em 0.8em;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+.comment{
+  margin: 0;
+  padding-bottom: 0.4em;
+}
+
+.guest-name{
+  color: #42b4c2;
+  font-size: 0.8em;
+  font-style: italic;
 }
 
 .logo{
@@ -89,7 +97,8 @@ body{
 }
 
 .form{
-  margin-bottom: 3em;
+  margin-top: 2.5em;
+  margin-bottom: 6em;
 }
 
 .footer{
@@ -99,7 +108,7 @@ body{
   background: #D6D6D0;
   font-size: 0.8em;
   color: #8e8e8b;
-  position: absolute;
-  width: 100%;
+  position: fixed;
   bottom: 0;
+  width: 100%;
 }
