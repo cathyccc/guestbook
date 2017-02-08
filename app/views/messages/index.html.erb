@@ -1,8 +1,12 @@
 <p class="intro">Thanks for dropping by! Feel free to leave a message.</p>
 
 <div id="messageBoard" class="message-board">
-  <% @messages.each do |msg| %>
-    <p class="comment"><%= msg.text %><p>
+  <% if @messages.length == 0 %>
+    <p class="no-comment"><em>There are currently no comments in the guestbook.</em></p>
+  <% else %>
+    <% @messages.each do |msg| %>
+      <p class="comment"><%= msg.text %><p>
+    <% end %>
   <% end %>
 </div>
 

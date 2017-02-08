@@ -35,6 +35,11 @@ body{
   margin-bottom: 2em;
 }
 
+.no-comment{
+  color: #42b4c2;
+  padding: 0.1em 0.8em 0.8em 0.8em;
+}
+
 .comment{
   text-align: left;
   border-bottom: 1px solid rgba(219, 222, 222, 0.8);
@@ -83,5 +88,8 @@ input{
   border-top: 1px solid rgba(144, 142, 142, 0.19);
   background: rgba(230, 229, 229, 0.39);
   font-size: 0.8em;
-  color: rgba(151, 148, 148, 0.9) ;
+  color: rgba(151, 148, 148, 0.9);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
